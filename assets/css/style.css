@@ -1,0 +1,9 @@
+.text-black
+{
+	color:black !important;
+}
+
+.carousel-inner .carousel-item img
+{
+	height: 80vh;
+}
