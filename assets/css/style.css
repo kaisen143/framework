@@ -57,4 +57,47 @@ p{
 	text-align: center;
 
 }
+.demo h1 
+{
+	font-size: 30px;
+	font-family: cursive;
+	color: white;
+	margin-top: 3px;
+
+}
+.demo h2 
+{
+	font-size: 25px;
+	color: lightslategray;
+	text-align: left;
+}
+.demo p 
+{
+	font-size: 20px;
+	
+	color: white;
+	margin-bottom: 5px;
+}
+.demo h3 
+{
+	font-size: 25px;
+	color: lightslategray;
+	text-align: left;
+	margin-top: 100px;
+}
+.demo h4 
+{
+	font-size: 25px;
+	color: lightslategray;
+	text-align: left;
+	margin-top: 70px;
+}
+.demo a 
+{
+	color: white;
+}
+.demo i 
+{
+	color: white;
+}
 
