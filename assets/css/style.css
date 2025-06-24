@@ -86,6 +86,13 @@ p{
 	text-align: left;
 	margin-top: 100px;
 }
+.demo h5 
+{
+	font-size: 25px;
+	color: black;
+
+	
+}
 .demo h4 
 {
 	font-size: 25px;
@@ -101,6 +108,7 @@ p{
 {
 	color: white;
 	font-size: 30px;
+
 }
 .crumb
 {
@@ -110,4 +118,11 @@ p{
 	text-align: center;
 	padding-top: 3.5em;
 }
-
+.demo hell
+{
+	height: 500px;
+} 
+.text-or
+{
+	color: #e07a4b;
+}
