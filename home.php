@@ -1,40 +1,3 @@
-<?php
-
-
-$servername="localhost";
-$username="root";
-$password="";
-$dbname="bhuwan_db";
-
-$conn=new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error)
-{
-	die("Connection failed: " . $conn->connect_error);
-}
-
-if(isset($_POST["contact"]))
-{
-	
-	$name=$_POST["name"];
-	$email=$_POST["email"];
-	$message=$_POST["message"];
-
-	$sql = "INSERT INTO contact(name,email,message)VALUES('$name','$email','$message')";
-
-	if($conn->query($sql)===TRUE)
-	{
-		echo "send successfully ";
-	}
-	else
-	{
-		echo "Error in message";
-	}
-	$conn->close();
-}
-
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,7 +34,7 @@ if(isset($_POST["contact"]))
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">FrontEnd</a></li>
+									<li><a class="dropdown-item" href="#">Transportation</a></li>
 									<li><a class="dropdown-item" href="#">Back End</a></li>
 									<li><a class="dropdown-item" href="#">Database</a></li>
 								</ul>
@@ -97,32 +60,45 @@ if(isset($_POST["contact"]))
 					<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
 				</div>
 
-				<!-- The slideshow/carousel -->
+			
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="assets/images/home1.jpg" alt="Los Angeles" class="d-block w-100">
 						<div class="carousel-caption">
-							<h3>world</h3>
-							<p>Some beautiful scenes of world</p>
+						<a href="signup.php" class="enter">Sign in</a>
+						<a href="login.php" class="welcome">Login</a>
+							<h3>✨ Welcome, traveler, to a land so grand,</h3>
+							<p>Welcome to a place where dreams come alive and every corner tells a story. Here, nature’s beauty and ancient wonders blend to create unforgettable memories. Step into a world filled with magic and adventure, where your journey begins with awe and delight. We’re thrilled to have you explore this enchanting destination—your perfect escape awaits.
+
+</p>
+							
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/images/home2.jpg" alt="Chicago" class="d-block w-100">
 						<div class="carousel-caption">
-							<h3>world</h3>
-							<p>Some beautiful scenes of world</p>
+							<a href="signup.php" class="enter" >Sign in</a>
+							<a href="login.php" class="welcome">Login</a>
+						<h3>✨ Welcome, traveler, to a land so grand,</h3>
+							<p>Welcome to a place where dreams come alive and every corner tells a story. Here, nature’s beauty and ancient wonders blend to create unforgettable memories. Step into a world filled with magic and adventure, where your journey begins with awe and delight. We’re thrilled to have you explore this enchanting destination—your perfect escape awaits.
+
+</p>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/images/home3.jpg" alt="New York" class="d-block w-100">
 						<div class="carousel-caption">
-							<h3>world</h3>
-							<p>Some beautiful scenes of world</p>
+								<a href="signup.php" class="enter">Sign in</a>
+								<a href="login.php" class="welcome">Login</a>
+							<h3>✨ Welcome, traveler, to a land so grand,</h3>
+							<p>Welcome to a place where dreams come alive and every corner tells a story. Here, nature’s beauty and ancient wonders blend to create unforgettable memories. Step into a world filled with magic and adventure, where your journey begins with awe and delight. We’re thrilled to have you explore this enchanting destination—your perfect escape awaits.
+
+</p>
 						</div>
 					</div>
 				</div>
 
-				<!-- Left and right controls/icons -->
+			
 				<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
 					<span class="carousel-control-prev-icon"></span>
 				</button>
@@ -132,141 +108,8 @@ if(isset($_POST["contact"]))
 			</div>
 
 		</section>
-		<section>
-			<h1 class="text-center mt-5 mb-5">About Us</h1>
-
-			<div class="container px-4">
-				<div class="row gx-5">
-					<div class="col">
-						<div class="p-3 border bg-light">
-							<img src="assets/images/home4.jpg" height="350px" width="100%">
-
-						</div>
-					</div>
-					<div class="col">
-						<div class="p-3 border bg-light">
-							<p>
-								Warm Welcome to our beloved customer , where design meets functionality.
-
-								We're a team of passionate web developers and creative thinkers dedicated to building websites that do more than just look great — they work hard for your business. Whether you're a small startup, an established brand, or an individual with a big idea, we’re here to bring your vision to life online.
-								With years of experience in web development, we specialize in 
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="industries">
-			<h1 class="text-center mt-5 mb-5">Our Industries</h1>
-			<div  class="container-fluid bg-img">
-				<div class="container">
-					<div class="row gap-3">
-
-						<div class="col bg-light mt-5 p-3   text-center">
-							
-							<h1 class="text-center">Food and Beverages <i class="fa-solid fa-utensils"></i></h1>
-							<p>
-								Restaurants, cafes, bars, and food services cater to tourists' dining needs, offering diverse culinary experiences. 
-								
-								
-							</p>
-						</div>
-
-						<div class="col bg-primary mt-5 p-3  text-center">
-
-							<h1 class="text-center">Transportation	<i class="fa-solid fa-car"></i></h1>
-							<p>
-								This involves various modes of travel, including airlines, railways, buses, rental cars, and cruise lines, facilitating the movement of tourists. 
-								
-								
-								
-							</p>
-						</div>
-
-						<div class="col bg-light mt-5 p-3 text-center">
-							
-							<h1 class="text-center">Accommodation:<i class="fa-solid fa-house"></i></h1>
-							<p>
-								This sector includes hotels, motels, resorts, bed and breakfasts, and campgrounds, providing lodging options for tourists. 
-							</p>
-						</div>
-
-
-					</div>
-
-				</div>
-
-			</div>
-		</section>
-		<section id="services">
-			<h1 class="text-center mt-5">Services</h1>
-			<p>
-				<marquee><b>Visit Some beautiful views of heaven of Nepal pokhara</b></marquee>
-			</p>
-			<div class="container mt-5 mb-5">
-				<div class="row ">
-					<div class="col-4">
-						<div class="card" width="100%" height="400px">
-							<img class="card-img-top" src="assets/images/pokhara.png" alt="Card image" height="400px">
-							<div class="card-body">
-								<h4 class="card-title">Pumdikot</h4>
-								<p class="card-text">
-									<b>Pumdikot Viewpoint</b><br>
-									Visit Pumdikot for a peaceful hilltop experience with a stunning view of Pokhara, Phewa Lake, and the Himalayas.
-									See the giant Shiva statue, enjoy fresh air, and take beautiful photos.
-									A perfect spot for sunrise, sunset, and quiet moments in nature.
-									A perfect spot for sunrise, sunset.
-
-								</p>
-								<a href="#" class="btn btn-primary">Rs.10000</a>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-4">
-						<div class="card"  width="100%" height="415px">
-							<img class="card-img-top" src="assets/images/boating.png" alt="Card image" height="400px">
-							<div class="card-body">
-								<h4 class="card-title">Lakeside of Pokhara</h4>
-								<p class="card-text">
-									<b>Pokhara Lakeside Tour Package</b><br>
-									Enjoy boating on Phewa Lake, visit the World Peace Pagoda, and relax by the lakeside.
-									Beautiful mountain views, peaceful walks, and fun activities like paragliding.
-									Hotel, breakfast, and local sightseeing included.
-									On the eastern shore, the Lakeside district has yoga centers and restaurants. 
-
-
-								</p>
-								<a href="#" class="btn btn-primary">Rs.20000</a>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col-4">
-						<div class="card" width="100%" height="400px">
-							<img class="card-img-top" src="assets/images/everest.png" alt="Card image" height="400px" width="100%">
-							<div class="card-body">
-								<h4 class="card-title">Mount Everest</h4>
-								<p class="card-text">
-									<b>Mount Everest</b><br>
-									Mount Everest is the highest mountain in the world, standing at 8,848 meters.
-									It attracts adventurers, trekkers, and nature lovers from around the world.
-									Enjoy close views from Everest Base Camp, helicopter tours, or scenic flights.
-									A once-in-a-lifetime experience in the heart of the Himalayas.		
-								</p>
-								<a href="#" class="btn btn-primary">RS.30000</a>
-							</div>
-						</div>
-
-					</div>
-
-
-				</div>
-
-			</div>
-		</section>
+		
+	
 		<footer class="hello">
 			<h1 class="text-center mt-5 mb-5">Contact</h1>
 			<div  class="container-fluid">
@@ -274,14 +117,12 @@ if(isset($_POST["contact"]))
 					<div class="row gap-3 " >
 
 						<div class="col k mt-5 p-3 bg-dark  text-center">
-							<form method="post">
 							<h1 style="color: white; margin-top: 10px; margin-bottom: 10px ;">Contact For Any Queries</h1>
-							<input type="textbox" name="name" placeholder="Full Name"><br>
-							<input type="textbox" name="email" placeholder="Email Address">
+							<input type="textbox" placeholder="Full Name"><br>
+							<input type="textbox" placeholder="Email Address">
 							<br>
-							<textarea rows="4" cols="40" name="message" placeholder="Message"></textarea><br>
-							<input type="button"  class="ren2" name="contact" value="Send"><br>
-						</form>
+							<textarea rows="4" cols="40" placeholder="Message"></textarea><br>
+							<input type="submit"  class="ren2" value="Send"><br>
 						</div>
 
 						<div class="col  mt-5 p-3  text-center bg-light">

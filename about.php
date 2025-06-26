@@ -49,16 +49,22 @@
 			</nav>
 		</header>
 			<section id="bread_crumb">
-			<div class="container-fluid crumb">
-				<h1>About Us</h1>
-			</div>
-		</section>
+			<div class="container-fluid crumb bg-light">
+		
+				 <h4 class="mb-1">Welcome to Nepal Tourism</h4>
+                <p>
+                    We're passionate about sharing the breathtaking beauty and culture of Nepal. Whether you're an adventurer seeking the thrill of the Himalayas, a peace-seeker drawn to our serene lakes, or a culture lover fascinated by our traditions — we've got something for you.
+                </p>
+               
+              	</div>
+	
 
-		<section id="home">
+	</section>
+	<section>
 
 			
-		<section>
-			<h1 class="text-center mt-5 mb-5">About Us</h1>
+	
+		
 
 			<div class="container px-4">
 				<div class="row gx-5">
@@ -71,10 +77,11 @@
 					<div class="col">
 						<div class="p-3 border bg-light">
 							<p>
-								Warm Welcome to our beloved customer , where design meets functionality.
+								<b>Warm Welcome to our beloved customer , where design meets functionality.</b>
 
-								We're a team of passionate web developers and creative thinkers dedicated to building websites that do more than just look great — they work hard for your business. Whether you're a small startup, an established brand, or an individual with a big idea, we’re here to bring your vision to life online.
-								With years of experience in web development, we specialize in 
+								 <p>
+                    Our dedicated team of travel experts, web developers, and locals work together to craft authentic and unforgettable experiences. With years of experience in travel and tourism, we offer tailored travel solutions, guided tours, and digital platforms that help showcase Nepal’s rich heritage.
+                </p>
 							</p>
 						</div>
 					</div>
