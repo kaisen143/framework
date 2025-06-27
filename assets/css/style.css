@@ -131,11 +131,11 @@ p{
 	
     display: inline-block;
     padding: 12px 24px;
-    background-color: #007BFF; /* Blue background */
+    background-color: green;
     color: black;
-   border: 2px solid;
+  	 border: 2px solid;
     border-radius: 5px;
-    font-size: 50px;
+    font-size: 40px;
     text-decoration: none;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s;
@@ -146,11 +146,11 @@ p{
 	
     display: inline-block;
     padding: 12px 24px;
-    background-color: #007BFF; /* Blue background */
+    background-color: green;
     color: black;
    border: 2px solid;
     border-radius: 5px;
-    font-size: 50px;
+    font-size: 40px;
     text-decoration: none;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s;

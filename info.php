@@ -1,3 +1,40 @@
+<?php
+
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="bhuwan_db";
+
+$conn=new mysqli($servername,$username,$password,$dbname);
+
+if($conn->connect_error)
+{
+	die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST["contact"]))
+{
+	
+	$name=$_POST["name"];
+	$email=$_POST["email"];
+	$message=$_POST["message"];
+
+	$sql = "INSERT INTO contact(name,email,message)VALUES('$name','$email','$message')";
+
+	if($conn->query($sql)===TRUE)
+	{
+		echo "send successfully ";
+	}
+	else
+	{
+		echo "Error in message";
+	}
+	$conn->close();
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +71,7 @@
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="industries.php">		Our industries</a></li>
+									<li><a class="dropdown-item" href="industries.php">Our Industries</a></li>
 									<li><a class="dropdown-item" href="services.php">Services</a></li>
 									<li><a class="dropdown-item" href="info.php">Info</a></li>
 								</ul>
@@ -48,86 +85,18 @@
 				</div>
 			</nav>
 		</header>
-		<section id="bread_crumb">
-			<div class="container-fluid crumb bg-light">
-
-				<h4 class="mt-1">Welcome to Nepal Tourism</h4>
-				<p>
-					We're passionate about sharing the breathtaking beauty and culture of Nepal. Whether you're an adventurer seeking the thrill of the Himalayas, a peace-seeker drawn to our serene lakes, or a culture lover fascinated by our traditions — we've got something for you.
-				</p>
-
-			</div>
-
-
-		</section>
-		<section>
-
-			
-
-
-
-			<div class="container px-4">
-				<div class="row gx-5">
-					<div class="col">
-						<div class="p-3 border bg-light">
-							<img src="assets/images/home4.jpg" height="300px" width="100%">
-
-						</div>
-					</div>
-					<div class="col">
-						<div class="p-3 border bg-light">
-							<p>
-								<b>Warm Welcome to our beloved customer , where design meets functionality.</b>
-
-								<p>
-									Our dedicated team of travel experts, web developers, and locals work together to craft authentic and unforgettable experiences. With years of experience in travel and tourism, we offer tailored travel solutions, guided tours, and digital platforms that help showcase Nepal’s rich heritage.
-								</p>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 		
-		<footer class="hello">
-			<h1 class="text-center mt-5 mb-5">Contact</h1>
-			<div  class="container-fluid">
-				<div class="container">
-					<div class="row gap-3 " >
-
-						<div class="col k mt-5 p-3 bg-dark  text-center">
-							<h1 style="color: white; margin-top: 10px; margin-bottom: 10px ;">Contact For Any Queries</h1>
-							<input type="textbox" placeholder="Full Name"><br>
-							<input type="textbox" placeholder="Email Address">
-							<br>
-							<textarea rows="4" cols="40" placeholder="Message"></textarea><br>
-							<input type="button"  class="ren2" value="Send"><br>
-						</div>
-
-						<div class="col  mt-5 p-3  text-center bg-light">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.540598745585!2d85.32773519999999!3d27.7314672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191780acf2a5%3A0xbba21002062d13d9!2sLe%20Sherpa%20Restaurant!5e0!3m2!1sen!2snp!4v1750743975054!5m2!1sen!2snp" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-						</div>
-
-
-
-
-					</div>
-
-				</div>
-
-			</div>
-		</footer>
-
+		
+		
 		<footer class ="demo">
-			<h1 class="text-center mt-5 mb-5 ">INFO</h1>
+			<h5 class="text-center mt-5 mb-5 ">INFO</h5>
 			<div  class="container-fluid">
 				<div class="container">
-					<div class="row gap-3 bg-dark" >
-						<div class="col  mt-5 p-3   text-center">
+					<div class="row gap-3 bg-dark hell" >
+						<div class="col  mt-5 p-3   text-center" >
 							<h1> Bhuwan Nepal Tourism</h1><br>
 							<h2> Contact</h2><br>
-							<p>nepaltourism.com.np</p><br>
-							<p>
+							<p>nepaltourism.com.np<br>
 								01-4528604
 							</p><br>
 							<h2> Opening hour</h2><br>
@@ -136,7 +105,7 @@
 
 								(Monday to Friday)
 							</p>
-							<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook " ></i></a>
+							<a href="login.php"><i class="fa-brands fa-facebook " ></i></a>
 							<a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
 							<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
 						</div>
@@ -153,21 +122,28 @@
 							</p>
 						</div>
 						<div class="col  pt-5  ">
-							<ul class="mt-5 pt-5">
-								<li>
+							<h3> Quick links</h3><br>
+							<ul class="mt-1 pt-5">
+								<li class="mb-2">
 									<a href="">Home</a>
 								</li>
-								<li>
+								<li class="mb-2">
 									<a href="#">About Us</a>
 								</li>
-								<li>
+								<li class="mb-2">
 									<a href="#">tourism aport</a>
 								</li>
-								<li>
+								<li class="mb-2">
 									<a href="#">Career</a>
 								</li>
-								<li>
+								<li class="mb-2">
 									<a href="#">Events</a>
+								</li>
+								<li class="mb-2">
+									<a href="#">Contacts</a>
+								</li>
+								<li class="mb-2">
+									<a href="#">Reviews</a>
 								</li>
 							</ul>
 						</div>

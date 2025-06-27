@@ -29,14 +29,14 @@
 								<a class="nav-link" href="about.php">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="javascript:void(0)">Contact</a>
+								<a class="nav-link" href="contact.php">Contact</a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="#">Transportation</a></li>
-									<li><a class="dropdown-item" href="#">Back End</a></li>
-									<li><a class="dropdown-item" href="#">Database</a></li>
+									<li><a class="dropdown-item" href="industries.php">Our Industries</a></li>
+									<li><a class="dropdown-item" href="services.php">Services</a></li>
+									<li><a class="dropdown-item" href="info.php">Info</a></li>
 								</ul>
 							</li>
 						</ul>
