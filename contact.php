@@ -1,4 +1,40 @@
+<?php
 
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="bhuwan_db";
+
+$conn=new mysqli($servername,$username,$password,$dbname);
+
+if($conn->connect_error)
+{
+	die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST["save"]))
+{
+	
+	$name=$_POST["name"];
+	$email=$_POST["email"];
+	$message=$_POST["message"];
+
+	$sql = "INSERT INTO contact(name,email,message)VALUES('$name','$email','$message')";
+
+	if($conn->query($sql)===TRUE)
+	{
+		echo "send successfully ";
+	}
+	else
+	{
+		echo "Error in message";
+	}
+	$conn->close();
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,7 +99,7 @@
 							<input type="textbox" name="email" placeholder="Email Address">
 							<br>
 							<textarea rows="4" cols="40" name="message" placeholder="Message"></textarea><br>
-							<input type="button"  class="ren2" name="contact" value="Send"><br>
+							<input type="submit"  class="ren2" name="contact" value="Send"><br>
 						</form>
 						</div>
 
