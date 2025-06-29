@@ -1,4 +1,5 @@
 
+
 <?php
 $servername="localhost";
 $username="root";
@@ -14,22 +15,24 @@ if($conn->connect_error)
 
 if(isset($_POST["save"]))
 {
-	$userId=$_POST["userId"];
-	$username=$_POST["username"];
+
+	$firstName = $_POST["first_name"];
+  $lastName = $_POST["last_name"];
+  $username = $firstName . " " . $lastName;
 	$month=$_POST["month"];
 	$day=$_POST["day"];
 	$year=$_POST["year"];
 	$birthday="$month-$day-$year";
 	$gender=$_POST["gender"];
 	$email=$_POST["email"];
-	$newpassword=$_POST["newpassword"];
+  $newpassword = password_hash($_POST["newpassword"], PASSWORD_DEFAULT);
 	
-	
-	$sql = "INSERT INTO tourist_signup(userId,username,birthday,gender,email,newpassword) VALUES ('$userId','$username','$birthday','$gender','$email','$newpassword')";
+	$sql = "INSERT INTO tourist_signup(username,birthday,gender,email,newpassword) VALUES ('$username','$birthday','$gender','$email','$newpassword')";
 
 	if($conn->query($sql)===TRUE)
 	{
-		echo "signup successfully";
+		header("Location: index.php");
+
 	}
 	else
 	{
@@ -144,8 +147,8 @@ if(isset($_POST["save"]))
 		<form method="post">
 			<div class="name-fields">
 
-				<input type="textbox" name="userId" placeholder="First name">
-				<input type="textbox" name="username" placeholder="Last name">
+				<input type="textbox" name="first_name" placeholder="First name">
+				<input type="textbox" name="last_name" placeholder="Last name">
 			</div>
 
 			<label>Birthday</label>

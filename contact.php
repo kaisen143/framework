@@ -99,7 +99,7 @@ if(isset($_POST["save"]))
 							<input type="textbox" name="email" placeholder="Email Address">
 							<br>
 							<textarea rows="4" cols="40" name="message" placeholder="Message"></textarea><br>
-							<input type="submit"  class="ren2" name="contact" value="Send"><br>
+							<input type="submit"  class="ren2" name="save" value="Send"><br>
 						</form>
 						</div>
 
